@@ -1,0 +1,4 @@
+7. We właściwościach Package zmień ProtectionLevel na DontSaveSensitive. Jaki ma to wpływ na eksport 
+procesu? 
+
+- Wrażliwe dane nie są wtedy zapisywane w pakiecie i można bezpiecznie eksportować pliki .dtsx bez ryzyka wycieku haseł
