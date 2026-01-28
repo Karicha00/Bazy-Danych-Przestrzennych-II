@@ -1,0 +1,5 @@
+bcp CUSTOMERS_401001 in "CUSTOMERS_401001_20260126_215233.csv" ^
+-f "C:\Users\Kacper\Desktop\BDPII\projekt10\CUSTOMERS_401001.fmt" ^
+-S DESKTOP-DOBEFOT\INDEKS401001 ^
+-d projekt_10 ^
+-T 

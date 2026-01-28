@@ -1,0 +1,10 @@
+10.0
+8
+1       SQLCHAR       0       12      ","     1     ProductKey        ""
+2       SQLCHAR       0       10      ","     2     CurrencyAlternateKey   ""
+3       SQLCHAR       0       50      ","     3     FIRST_NAME       ""
+4       SQLCHAR       0       50      ","     4     LAST_NAME        ""
+5       SQLCHAR       0       12      ","     5     OrderDateKey     ""
+6       SQLCHAR       0       12      ","     6     OrderQuantity    ""
+7       SQLCHAR       0       41      ","     7     UnitPrice        ""
+8       SQLCHAR       0       10      "\r\n"  8     SecretCode       ""
