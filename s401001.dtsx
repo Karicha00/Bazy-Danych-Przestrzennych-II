@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/15/2026 7:13:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-DOBEFOT"
+  DTS:CreatorName="DESKTOP-DOBEFOT\Kacper"
+  DTS:DTSID="{5B0D959A-62F2-4D93-9FF9-2832EA98BC41}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="s401001"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{EEFEB5F2-2FE9-48E8-82D9-162EE5AC540A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HTTP Connection Manager]"
+      DTS:CreationName="HTTP"
+      DTS:DTSID="{466C85C7-868F-423F-9D75-9D4AB8A96BA5}"
+      DTS:ObjectName="HTTP Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="http://www.dneonline.com/calculator.asmx">
+          <DTS:HttpConnection
+            DTS:ServerURL="http://www.dneonline.com/calculator.asmx">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqYT90VwW/0mlyOR/3lSrsAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAHwt/zX4QBE/mToSh7mM/H2yHcQsoWAmALB1itk1GZxwAAAAAOgAAAAAIAACAAAACK0b4bapBy/6sG2+qzlWYxMY5dUrNkB/Mfpy7GNcLV1hAAAACw+cbdC85ptQ8wJRe31XIkQAAAAIaquHzHUTDSYtIgwBkFlXiLkXocofd9gBZ87UvBRmol+JQTW46SUArKsSEWitVZ1J0J7rMxaD3ciBWGV6kgnEQ</DTS:Property>
+            <DTS:Property
+              DTS:Name="ProxyPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqYT90VwW/0mlyOR/3lSrsAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADOUS4zxIpJqnXnoRdiE7nTaji4jGwGPMy5VAa3PPzSMwAAAAAOgAAAAAIAACAAAADffmQFZHGAi+sNnH+OlRIHLqyrn4Nx+wbU2DU+GzMBBhAAAACNbJYe2low8M7eFkrwd5A9QAAAAKla5/EACk7r8aWrDIhGavtAmO6i1AFUlOWO5QVmtXSiptcy1kIrXbBoXvFQ7opNgTzkAd34OJ5Pxc8i8Pkareg</DTS:Property>
+          </DTS:HttpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[output.xml]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{9B2A607B-3117-40D7-92C9-756B4552AC5B}"
+      DTS:ObjectName="output.xml">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\Kacper\Desktop\BDPII\projekt11\output.xml" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{71578116-7C7C-41F6-9C05-26F6EA0CF974}"
+      DTS:ObjectName="a">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">7</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{2D8EF022-F1AD-4101-96C6-FBEF62BE7E16}"
+      DTS:ObjectName="b">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">9</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Web Service Task"
+      DTS:CreationName="Microsoft.WebServiceTask"
+      DTS:Description="Web Service Task"
+      DTS:DTSID="{CEB2CFDD-C9DE-4893-B8E3-0349BD313EED}"
+      DTS:ExecutableType="Microsoft.WebServiceTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Web Service Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <WSTask:WebServiceTaskData
+          WSTask:ConnectionName="{466C85C7-868F-423F-9D75-9D4AB8A96BA5}"
+          WSTask:Service="Calculator"
+          WSTask:WSDLFile="C:\Users\Kacper\Desktop\BDPII\projekt11\calculator.wsdl"
+          WSTask:OverwriteWSDLFile="True"
+          WSTask:OutputLocation="output.xml" xmlns:WSTask="www.microsoft.com/sqlserver/dts/tasks/webservicetask">
+          <WSTask:MethodInfo
+            WSTask:MethodName="Add"
+            WSTask:MessageName="">
+            <WSTask:Documentation>Adds two integers. This is a test WebService. Â©DNE Online</WSTask:Documentation>
+            <WSTask:ParamInfo
+              WSTask:Name="intA"
+              WSTask:Datatype="int"
+              WSTask:ParamType="Variable"
+              WSTask:SeqNumber="0">
+              <WSTask:VariableValue>$Package::a</WSTask:VariableValue>
+            </WSTask:ParamInfo>
+            <WSTask:ParamInfo
+              WSTask:Name="intB"
+              WSTask:Datatype="int"
+              WSTask:ParamType="Variable"
+              WSTask:SeqNumber="1">
+              <WSTask:VariableValue>$Package::b</WSTask:VariableValue>
+            </WSTask:ParamInfo>
+          </WSTask:MethodInfo>
+        </WSTask:WebServiceTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Web Service Task"
+          TopLeft="317.499982652566,173.333332127995" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
