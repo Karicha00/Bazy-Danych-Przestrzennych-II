@@ -1,0 +1,3 @@
+- domyślny sposób łączenia danych to INNER JOIN, jakie są inne opcje? Jaka jest różnica pomiędzy nimi?
+
+INNER JOIN zwraca tylko te rekordy, które mają dopasowanie w obu tabelach, LEFT JOIN zwraca wszystkie rekordy z lewego źródła i dopasowania z prawego, natomiast FULL JOIN zwraca wszystkie rekordy z obu źródeł, uzupełniając brakujące wartości NULLami
