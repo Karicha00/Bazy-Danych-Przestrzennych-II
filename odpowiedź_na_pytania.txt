@@ -1,0 +1,7 @@
+- Jakie inne operacje, oprócz COUNT, umożliwia komponent Aggregate? 
+
+SUM – sumowanie wartości kolumn
+AVG – obliczanie średniej
+MIN – znalezienie minimalnej wartości
+MAX – znalezienie maksymalnej wartości
+COUNT DISTINCT - zliczanie unikalnych wartości
