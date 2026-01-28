@@ -1,0 +1,3 @@
+-Co to jest Lookup No Match Output, co i kiedy zostanie tam zapisane? 
+
+Lookup No Match Output to wyjście, które przechwytuje wszystkie rekordy, dla których nie znaleziono żadnego dopasowania
