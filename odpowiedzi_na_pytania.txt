@@ -1,0 +1,9 @@
+6. Jaki typ SCD został zaimplementowany w każdej z kwerend w zadaniu numer 5b i c? 
+
+zmiana LastName w 5b, FirstName w 5c - Typ 1 (nadpisanie wartości)
+zmiana Title w 5b - Typ 2 (zachowanie wartości)
+zmiana FirstName w 5c - Typ 0 (atrybut stały)
+
+7. Na działanie procesu SSIS w zadaniu 5c miało wpływ ustawienie
+„Fail the transformation if changes are detected in a fixed attribute”,
+ponieważ kolumna FirstName została zdefiniowana jako Fixed Attribute.
